@@ -117,4 +117,7 @@ create table BOWLER_SCORES_ARCHIVE
 
     primary key (MatchID, GameNumber, BowlerID),
     -- foreign key (MatchID) references MATCH_GAMES_ARCHIVE (MatchID),
-    foreig
+    foreign key (MatchID, GameNumber) references MATCH_GAMES_ARCHIVE (MatchID, GameNumber),
+    -- foreign key (GameNumber) references MATCH_GAMES_ARCHIVE (GameNumber)
+    foreign key (BowlerID) references BOWLERS (BowlerID)
+);

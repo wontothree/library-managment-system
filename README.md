@@ -40,6 +40,8 @@ DESCRIBE [TABLE_NAME];
 지정된 SQL 파일의 내용을 현재 선택된 데이터베이스에 적용한다.
 
 ```bash
+source /Users/kevinliam/Desktop/anthony/development/sql/sales_orders_data.sql;
+
 source /Users/kevinliam/Desktop/anthony/development/sql/entertainment_agency_database.sql;
 source /Users/kevinliam/Desktop/anthony/development/sql/school_scheduling_database.sql;
 source /Users/kevinliam/Desktop/anthony/development/sql/bowling_league_database.sql;
