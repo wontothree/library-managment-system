@@ -88,3 +88,16 @@ INSERT INTO VENDORS (VendorID, VendName, VendStreetAddress, VendCity, VendState,
 ('V008', 'Vendor H', '246 Seventh St', 'San Antonio', 'TX', '78201', '210-555-8000', '210-555-8001', 'http://vendorh.com', 'contact@vendorh.com'),
 ('V009', 'Vendor I', '357 Eighth St', 'San Diego', 'CA', '92101', '619-555-9000', '619-555-9001', 'http://vendori.com', 'contact@vendori.com'),
 ('V010', 'Vendor J', '468 Ninth St', 'Dallas', 'TX', '75201', '214-555-0000', '214-555-0001', 'http://vendorj.com', 'contact@vendorj.com');
+
+-- PRODUCT_VENDORS 데이터 삽입
+INSERT INTO PRODUCT_VENDORS (ProductNumber, VendorID, WholesalePrice, DaysToDeliver) VALUES 
+('P001', 'V001', 850.00, 5),
+('P002', 'V002', 700.00, 7),
+('P003', 'V003', 15.00, 2),
+('P004', 'V004', 12.00, 3),
+('P005', 'V005', 25.00, 4),
+('P006', 'V006', 75.00, 6),
+('P007', 'V007', 100.00, 8),
+('P008', 'V008', 400.00, 10),
+('P009', 'V009', 20.00, 3),
+('P010', 'V010', 15.00, 4);

@@ -1,3 +1,19 @@
+-- 모든 테이블 삭제
+SET FOREIGN_KEY_CHECKS = 0;
+
+DROP TABLE IF EXISTS ORDER_DETAILS_ARCHIVE;
+DROP TABLE IF EXISTS ORDERS_ARCHIVE;
+DROP TABLE IF EXISTS PRODUCT_VENDORS;
+DROP TABLE IF EXISTS VENDORS;
+DROP TABLE IF EXISTS ORDER_DETAILS;
+DROP TABLE IF EXISTS PRODUCTS;
+DROP TABLE IF EXISTS CATEGORIES;
+DROP TABLE IF EXISTS ORDERS;
+DROP TABLE IF EXISTS EMPLOYEES;
+DROP TABLE IF EXISTS CUSTOMERS;
+
+SET FOREIGN_KEY_CHECKS = 1;
+
 create table CUSTOMERS
 (
     CustomerID        varchar(20) primary key,
@@ -33,7 +49,7 @@ create table ORDERS
     ShipDate    DATETIME not null,
     CustomerID  varchar(20),
     EmployeeID  varchar(20),
-    OrderTotal  decimal  not null, -- total price of the items in the order
+    OrderTotal  decimal(5, 2)  not null, -- total price of the items in the order
 
     foreign key (CustomerID) references CUSTOMERS (CustomerID),
     foreign key (EmployeeID) references EMPLOYEES (EmployeeID)
@@ -52,7 +68,7 @@ create table PRODUCTS
     ProductNumber      varchar(20) primary key,
     ProductName        varchar(256) not null,
     ProductDescription varchar(1024),
-    RetailPrice        decimal      not null,
+    RetailPrice        decimal(5, 2)      not null,
     QuantityOnHand     integer      not null,
     CategoryID         varchar(20),
 
@@ -64,7 +80,7 @@ create table ORDER_DETAILS
 (
     OrderNumber     varchar(20) not null,
     ProductNumber   varchar(20) not null,
-    QuotedPrice     decimal     not null,
+    QuotedPrice     decimal(5, 2)     not null,
     QuantityOrdered integer     not null,
 
     primary key (OrderNumber, ProductNumber),
@@ -112,13 +128,13 @@ create table ORDERS_ARCHIVE
 );
 
 
-create table ORDER_DETAILS_ARCHIVE
-(
-    OrderNumber     varchar(20) not null,
-    ProductNumber   varchar(20) not null,
-    QuotedPrice     decimal     not null,
-    QuantityOrdered integer     not null,
+-- create table ORDER_DETAILS_ARCHIVE
+-- (
+--     OrderNumber     varchar(20) not null,
+--     ProductNumber   varchar(20) not null,
+--     QuotedPrice     decimal     not null,
+--     QuantityOrdered integer     not null,
 
-    primary key (OrderNumber, ProductNumber),
-    foreign key (OrderNumber) references ORDERS_ARCHIVE (OrderNumber)
-);
+--     primary key (OrderNumber, ProductNumber),
+--     foreign key (OrderNumber) references ORDERS_ARCHIVE (OrderNumber)
+-- );
