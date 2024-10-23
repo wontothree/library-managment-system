@@ -1,49 +1,28 @@
 # Structured Query Language
 
-MySQL에 접속한다.
+Devcontainer에 접속한다.
 
 ```bash
-mysql.server start
-mysql -u root -p
+vscode ➜ /workspaces/sql (main) $ chmod +x connect_mysql.sh
+vscode ➜ /workspaces/sql (main) $ ./connect_mysql.sh
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 9.1.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> 
 ```
 
-Database를 조회한다.
-
 ```bash
-SHOW DATABASES;
-```
+USE [database_name];
 
-Database에 접속한다.
-
-```bash
-USE [DATABASE_NAME];
-```
-
-특정 데이터베이스 테이블 조회한다.
-
-```bash
-SHOW TABLES;
-```
-
-테이블 내용 조회
-
-```bash
-SELECT * FROM [TABLE_NAME];
-```
-
-테이블 column 정보 조회
-
-```bash
-DESCRIBE [TABLE_NAME];
-```
-
-지정된 SQL 파일의 내용을 현재 선택된 데이터베이스에 적용한다.
-
-```bash
-source /Users/kevinliam/Desktop/anthony/development/sql/sales_orders_data.sql;
-
-source /Users/kevinliam/Desktop/anthony/development/sql/entertainment_agency_database.sql;
-source /Users/kevinliam/Desktop/anthony/development/sql/school_scheduling_database.sql;
-source /Users/kevinliam/Desktop/anthony/development/sql/bowling_league_database.sql;
-source /Users/kevinliam/Desktop/anthony/development/sql/receipts_database.sql;
+SOURCE sales_orders_database.sql
 ```
