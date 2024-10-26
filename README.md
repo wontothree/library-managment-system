@@ -26,3 +26,10 @@ USE [database_name];
 
 SOURCE sales_orders_database.sql
 ```
+
+## Financial Statement Database
+
+Transaction Table
+
+|id|date|amount|type|category|description|payment_method|created_at|update_at|
+|---|---|---|---|---|---|---|---|---|
