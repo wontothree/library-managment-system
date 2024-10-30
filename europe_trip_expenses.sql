@@ -21,4 +21,6 @@ VALUES
     ('2024-10-23', 422593, 'Expense', 'Conference', 'CES Trend Report'),
     ('2024-10-24', 3632800, 'Income', 'Scholarship', 'InBody Scholarship'),
     ('2024-10-24', 821343, 'Expense', 'Air Plane', 'Las Vegas 2 Incheon'),
-    ('2024-09-26', 1123000, 'Expense', 'Air Plane', 'Budapest 2 Los Angeles');
+    ('2024-09-26', 1123000, 'Expense', 'Air Plane', 'Budapest 2 Los Angeles'),
+    ('2024-09-15', 255660, 'Expense', 'Hotel', 'Las Vegas from 0106 to 0110'),
+    ('2024-10-27', 106506, 'Expense', 'Air BNB', 'Budapest from from 20241229 to 20251231');
