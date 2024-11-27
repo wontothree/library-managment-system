@@ -1,3 +1,7 @@
+# Library Mangement System
+
+Library Mangement System Project using Tkinter and MySQL
+
 # Structured Query Language
 
 Devcontainer에 접속한다.
@@ -33,3 +37,5 @@ Transaction Table
 
 |id|date|amount|type|category|description|payment_method|created_at|update_at|
 |---|---|---|---|---|---|---|---|---|
+
+Impossible1379!

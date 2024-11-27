@@ -1,4 +1,4 @@
-create table TOURNAMENTS
+ㅌcreate table TOURNAMENTS
 (
     TourneyID       varchar(20) primary key,
     TourneyDate     date         not null,
