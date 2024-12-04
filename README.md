@@ -56,7 +56,6 @@ export PYTHONPATH="/Users/kevinliam/Desktop/anthony/development/library-manageme
 
 # ERD
 
-
 ```mermaid
 erDiagram
     %% 멤버 테이블을 정의합니다.
@@ -117,10 +116,8 @@ erDiagram
         int member_id FK
         int book_id FK
         date loan_date
-        date due_date
         date return_date
         int overdue_fee
-        int loan_duration  
     }
 
     %% 관계 정의
@@ -130,5 +127,4 @@ erDiagram
     clubs ||--o{ member_club : "includes"
     members ||--o{ loan : "borrows"
     books ||--o{ loan : "is loaned"
-
 ```
