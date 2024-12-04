@@ -1,8 +1,40 @@
 # Library Mangement System
 
-Library Mangement System Project using Tkinter and MySQL
+Library Mangement System Project using Tkinter and MySQL.
 
-# Structured Query Language
+I used architecture Model-View-Controller
+
+    library-management-system
+    └── src/
+        ├── database/                    
+        │   ├── config.py                   # 데이터베이스 연결 설정, 파일 경로 설정
+        │   ├── initialize_database.py      # initialize database using schema.sql
+        │   ├── queries.sql                 # often used SQL queries
+        │   └── schema.sql                  # 테이블 스키마 정의 파일
+        │
+        ├── models/                         # 모델 계층 (DB와 비즈니스 로직의 중간다리 역할)
+        │   ├── base.py                     # parent model for commons
+        │   ├── book.py                     # Book 모델 정의
+        │   ├── members.py                  # model for table members
+        │   └── loan.py                     # Loan 모델 정의
+        │
+        ├── controllers/                    # 컨트롤러 계층 (로직과 View를 연결)
+        │   ├── __init__.py                 # 컨트롤러 초기화
+        │   ├── book_controller.py          # Book 관련 컨트롤러
+        │   ├── member_controller.py        # Member 관련 컨트롤러
+        │   └── loan_controller.py          # Loan 관련 컨트롤러
+        │
+        ├── views/                          # tkinter GUI
+        │   ├── __init__.py                 # 뷰 초기화
+        │   ├── book_views.py               # Book 관련 뷰
+        │   ├── member_views.py             # Member 관련 뷰
+        │   └── loan_views.py               # Loan 관련 뷰
+        │
+        ├── components/                     # 
+        ├── pages/                          #
+        └── index.py                        # 프로그램의 진입점
+
+# Getting Started
 
 Devcontainer에 접속한다.
 
