@@ -117,7 +117,6 @@ erDiagram
         int book_id FK
         date loan_date
         date return_date
-        int overdue_fee
     }
 
     %% 관계 정의
